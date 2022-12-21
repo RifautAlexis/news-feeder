@@ -1,17 +1,16 @@
 
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using NewsFeeder.Api.DataAccess;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-    .AddControllers(options =>
-    {
-        options.UseNamespaceRouteToken();
-    })
+    .AddControllers()
     .AddNewtonsoftJson();
 
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 builder.Services.AddSwaggerGen(config =>
 {
