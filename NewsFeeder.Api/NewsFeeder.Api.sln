@@ -3,18 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsFeeder.Api", "NewsFeeder.Api\NewsFeeder.Api.csproj", "{C54EC12C-3922-412A-97C6-6D699058691B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsFeeder.Api", "src\NewsFeeder.Api\NewsFeeder.Api.csproj", "{C54EC12C-3922-412A-97C6-6D699058691B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{68C04911-2C71-4509-8D0A-AA2D85CCF025}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsFeeder.Api.UnitTest", "NewsFeeder.Api.UnitTest\NewsFeeder.Api.UnitTest.csproj", "{A971D423-9B76-449E-8C01-D91D80E8446B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsFeeder.Api.UnitTest", "tests\NewsFeeder.Api.UnitTest\NewsFeeder.Api.UnitTest.csproj", "{A971D423-9B76-449E-8C01-D91D80E8446B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{57DEDDDC-78E7-4541-96A5-2707CAC9EE8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1E5EF90E-F72E-4140-849B-1DCE7137F761}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "popo", "popo", "{82CE9BC3-6FEC-402C-8DEE-3B4D6776EA25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
