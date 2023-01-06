@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using NUnit;
 
-namespace NewsFeeder.Api.UnitTest.Automapper
+namespace Api.UnitTest.Automapper
 {
     public class AutoMapperTestBase<TSource, TDestination> where TSource : new()
     {

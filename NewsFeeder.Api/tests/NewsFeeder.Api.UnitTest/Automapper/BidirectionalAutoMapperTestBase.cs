@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace NewsFeeder.Api.UnitTest.Automapper
+namespace Api.UnitTest.Automapper
 {
     public class BidirectionalAutoMapperTestBase<TSource, TDestination> : AutoMapperTestBase<TSource, TDestination> where TSource : new() where TDestination : new()
     {
