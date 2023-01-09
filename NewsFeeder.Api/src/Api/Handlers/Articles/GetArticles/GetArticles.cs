@@ -1,7 +1,7 @@
-﻿using AutoMapper.QueryableExtensions;
+﻿using Api.DataAccess;
+using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Api.DataAccess;
 
 namespace Api.Endpoints.Articles;
 

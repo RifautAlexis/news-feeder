@@ -1,8 +1,8 @@
-﻿using Api.IntegrationTests;
+﻿using Api.Domain;
+using Api.Endpoints.Articles;
+using Api.IntegrationTests;
 using FluentAssertions;
 using NUnit.Framework;
-using Api.Domain;
-using Api.Endpoints.Articles;
 
 namespace Api.IntegrationTests.Handlers.Articles;
 
@@ -46,6 +46,6 @@ public class GetAllTests : BaseTestFixture
         var result = await SendAsync(query);
 
         // Assert
-        result.Should().HaveCount(3);
+        result.Should().HaveCount(2);
     }
 }

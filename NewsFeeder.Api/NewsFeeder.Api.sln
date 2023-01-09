@@ -8,15 +8,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.UnitTests", "tests\NewsFeeder.Api.UnitTest\Api.UnitTests.csproj", "{A971D423-9B76-449E-8C01-D91D80E8446B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.UnitTests", "tests\NewsFeeder.Api.UnitTests\Api.UnitTests.csproj", "{A971D423-9B76-449E-8C01-D91D80E8446B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{57DEDDDC-78E7-4541-96A5-2707CAC9EE8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1E5EF90E-F72E-4140-849B-1DCE7137F761}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.IntegrationTests", "tests\Application.IntegrationTests\Api.IntegrationTests.csproj", "{AB4FEBB1-6EC4-40E0-837A-BFFD9640AC1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.IntegrationTests", "tests\NewsFeeder.Api.IntegrationTests\Api.IntegrationTests.csproj", "{AB4FEBB1-6EC4-40E0-837A-BFFD9640AC1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\Api\Api.csproj", "{8A29EF1E-1FDD-443A-BEFF-4B6BFA426EE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{8A29EF1E-1FDD-443A-BEFF-4B6BFA426EE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C54EC12C-3922-412A-97C6-6D699058691B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C54EC12C-3922-412A-97C6-6D699058691B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C54EC12C-3922-412A-97C6-6D699058691B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C54EC12C-3922-412A-97C6-6D699058691B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A971D423-9B76-449E-8C01-D91D80E8446B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A971D423-9B76-449E-8C01-D91D80E8446B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A971D423-9B76-449E-8C01-D91D80E8446B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,7 +41,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C54EC12C-3922-412A-97C6-6D699058691B} = {57DEDDDC-78E7-4541-96A5-2707CAC9EE8A}
 		{A971D423-9B76-449E-8C01-D91D80E8446B} = {1E5EF90E-F72E-4140-849B-1DCE7137F761}
 		{AB4FEBB1-6EC4-40E0-837A-BFFD9640AC1D} = {1E5EF90E-F72E-4140-849B-1DCE7137F761}
 		{8A29EF1E-1FDD-443A-BEFF-4B6BFA426EE9} = {57DEDDDC-78E7-4541-96A5-2707CAC9EE8A}

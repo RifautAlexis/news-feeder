@@ -1,0 +1,55 @@
+#!/bin/bash
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[1;32m'
+NC='\033[0m'
+BOLD='\033[1m'
+TAB='\t'
+
+# Backend - ASP.NET Core
+cd NewsFeeder.Api
+
+# build
+echo -e "${YELLOW}Running pre-commit hook, dotnet build...${NC}"
+dotnet build >/dev/null
+rc=$?
+if [[ $rc != 0 ]]; then
+    echo -e "${RED} ${TAB} Failed to build the project, please fix this and commit again${NC}"
+    exit $rc
+else
+    echo -e "${GREEN} ${TAB} Succeeded to build the project${NC}"
+fi
+
+# test
+echo -e "${YELLOW}Running pre-commit hook, dotnet test...${NC}"
+for url_project_unitTests in $(find tests -regex '.*\.UnitTests/.*\UnitTests\.csproj'); do
+    dotnet test $url_project_unitTests --no-build >/dev/null
+
+    rc=$?
+    if [[ $rc != 0 ]]; then
+        echo -e "${RED} ${TAB} [${url_project_unitTests##*UnitTests/}] Test failed, please fix this and commit again${NC}"
+        exit $rc
+    else
+        echo -e "${GREEN} ${TAB} [${url_project_unitTests##*UnitTests/}] Test passed${NC}"
+    fi
+done
+
+# format
+echo -e "${YELLOW}Running pre-commit hook, dotnet format...${NC}"
+dotnet format --no-restore --exclude ./src/Api/DataAccess/Migrations >/dev/null
+rc=$?
+if [[ $rc != 0 ]]; then
+    echo -e "${RED} ${TAB} Failed to format project, please fix this and commit again${NC}"
+    exit $rc
+else
+    echo -e "${GREEN} ${TAB} Succeeded to format the project${NC}"
+fi
+
+cd ..
+
+# Frontend - Angular
+# cd NewsFeeder.WebUi
+
+# Mobile - Flutter
+
+exit 0

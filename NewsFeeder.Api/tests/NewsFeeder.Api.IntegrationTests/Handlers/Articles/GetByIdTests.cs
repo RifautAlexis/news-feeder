@@ -1,7 +1,7 @@
-﻿using FluentAssertions;
-using NUnit.Framework;
-using Api.Domain;
+﻿using Api.Domain;
 using Api.Endpoints.Articles;
+using FluentAssertions;
+using NUnit.Framework;
 
 namespace Api.IntegrationTests.Handlers.Articles;
 
