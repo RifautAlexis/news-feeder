@@ -1,10 +1,10 @@
-﻿using MediatR;
+﻿using Api.DataAccess;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Api.DataAccess;
 using NUnit.Framework;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -16,7 +16,7 @@ public partial class Testing
     private static WebApplicationFactory<Program> _factory = null!;
     private static IConfiguration _configuration = null!;
     private static IServiceScopeFactory _scopeFactory = null!;
-    private static string? _currentUserId;
+    private static readonly string? _currentUserId;
 
     [OneTimeSetUp]
     public async Task RunBeforeAnyTests()

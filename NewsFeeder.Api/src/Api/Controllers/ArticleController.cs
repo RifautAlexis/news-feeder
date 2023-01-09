@@ -1,29 +1,29 @@
-﻿using MediatR;
+﻿using Api.Endpoints.Articles;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Api.Endpoints.Articles;
 
-namespace Api.Controllers
+namespace Api.Controllers;
+
+[Route("[controller]")]
+public class ArticleController : ApiController
 {
-    [Route("[controller]")]
-    public class ArticleController : ApiController
+    public ArticleController(IMediator mediator) : base(mediator)
     {
-        public ArticleController(IMediator mediator) : base(mediator)
-        {
-        }
+    }
 
-        [HttpGet("")]
-        public async Task<ActionResult<IEnumerable<GetArticlesResult>>> GetAll()
-        {
-            return Ok(await _mediator.Send(new GetArticlesRequest()));
-        }
+    [HttpGet("")]
+    public async Task<ActionResult<IEnumerable<GetArticlesResult>>> GetAll()
+    {
+        return Ok(await _mediator.Send(new GetArticlesRequest()));
+    }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<GetArticleResult>> GetById(int id)
+    [HttpGet("{id}")]
+    public async Task<ActionResult<GetArticleResult>> GetById(int id)
+    {
+        var request = new GetArticleRequest
         {
-            var request = new GetArticleRequest {
-                Id = id
-            };
-            return Ok(await _mediator.Send(request));
-        }
+            Id = id
+        };
+        return Ok(await _mediator.Send(request));
     }
 }

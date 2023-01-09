@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Api.Domain;
+﻿using Api.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api.DataAccess;
 

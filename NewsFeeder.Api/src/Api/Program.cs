@@ -1,8 +1,8 @@
 
+using System.Reflection;
+using Api.DataAccess;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Api.DataAccess;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
