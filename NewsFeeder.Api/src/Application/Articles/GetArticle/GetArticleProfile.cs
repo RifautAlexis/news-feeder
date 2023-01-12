@@ -1,7 +1,7 @@
-﻿using Api.Domain;
+﻿using Domain.Entities;
 using AutoMapper;
 
-namespace Api.Endpoints.Articles;
+namespace Application.Articles.GetArticle;
 
 public class GetArticleProfile : Profile
 {

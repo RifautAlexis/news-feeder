@@ -1,8 +1,8 @@
-﻿using Api.Domain;
+﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Api.DataAccess.Configs;
+namespace Infrastructure.Persistence.Configurations;
 
 public class ArticleConfig : IEntityTypeConfiguration<Article>
 {

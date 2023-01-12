@@ -1,4 +1,5 @@
-﻿using Api.Endpoints.Articles;
+﻿using Application.Articles.GetArticle;
+using Application.Articles.GetArticles;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

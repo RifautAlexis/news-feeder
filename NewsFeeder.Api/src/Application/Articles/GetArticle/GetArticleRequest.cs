@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Api.Endpoints.Articles;
+namespace Application.Articles.GetArticle;
 
 public class GetArticleRequest : IRequest<GetArticleResult>
 {

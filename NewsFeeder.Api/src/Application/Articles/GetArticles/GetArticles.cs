@@ -1,9 +1,9 @@
-﻿using Api.DataAccess;
-using AutoMapper.QueryableExtensions;
+﻿using AutoMapper.QueryableExtensions;
+using Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Api.Endpoints.Articles;
+namespace Application.Articles.GetArticles;
 
 public class GetArticles : IRequestHandler<GetArticlesRequest, IEnumerable<GetArticlesResult>>
 {

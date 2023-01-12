@@ -1,12 +1,11 @@
-﻿namespace Api.Domain;
+﻿using Domain.Entities;
 
-public class Article : BaseEntity
+namespace Application.Articles.GetArticle;
+
+public class GetArticleResult : BaseEntity
 {
     public string Title { get; set; }
     public string Content { get; set; }
     public int AuthorId { get; set; }
     public int? UpdaterId { get; set; }
-
-    public virtual User Author { get; set; }
-    public virtual User? Updater { get; set; }
 }

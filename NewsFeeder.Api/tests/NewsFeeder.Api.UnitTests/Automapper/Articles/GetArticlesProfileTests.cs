@@ -1,6 +1,6 @@
-﻿using Api.Domain;
-using Api.Endpoints.Articles;
-using Api.UnitTest.Automapper;
+﻿using Api.UnitTest.Automapper;
+using Application.Articles.GetArticles;
+using Domain.Entities;
 
 namespace Api.UnitTests.Automapper.Articles;
 

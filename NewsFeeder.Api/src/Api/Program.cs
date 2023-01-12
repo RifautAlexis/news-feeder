@@ -1,31 +1,8 @@
-
-using System.Reflection;
-using Api.DataAccess;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services
-    .AddControllers()
-    .AddNewtonsoftJson();
-
-builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
-
-builder.Services.AddSwaggerGen(config =>
-{
-    config.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "News feed API", Version = "v1" });
-    config.EnableAnnotations();
-});
-
-var connectionString = builder.Configuration["DbSettings:ConnectionStrings:DefaultConnection"];
-var serverVersion = new MySqlServerVersion(new Version(builder.Configuration.GetValue<int>("ConnectionStrings:ServerVersion:Major"), builder.Configuration.GetValue<int>("ConnectionStrings:ServerVersion:Minor"), builder.Configuration.GetValue<int>("ConnectionStrings:ServerVersion:Build")));
-builder.Services.AddDbContext<AppDbContext>(
-            dbContextOptions => dbContextOptions
-                .UseLazyLoadingProxies()
-                .UseMySql(connectionString, serverVersion));
-
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddApiServices();
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices(builder.Configuration);
 
 var app = builder.Build();
 

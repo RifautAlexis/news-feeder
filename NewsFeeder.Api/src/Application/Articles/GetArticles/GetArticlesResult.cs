@@ -1,6 +1,6 @@
-﻿using Api.Domain;
+﻿using Domain.Entities;
 
-namespace Api.Endpoints.Articles;
+namespace Application.Articles.GetArticles;
 
 public class GetArticlesResult : BaseEntity
 {

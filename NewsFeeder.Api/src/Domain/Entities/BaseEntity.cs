@@ -1,4 +1,4 @@
-﻿namespace Api.Domain;
+﻿namespace Domain.Entities;
 
 public class BaseEntity
 {

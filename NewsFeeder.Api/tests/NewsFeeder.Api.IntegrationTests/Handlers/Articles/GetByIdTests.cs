@@ -1,5 +1,5 @@
-﻿using Api.Domain;
-using Api.Endpoints.Articles;
+﻿using Application.Articles.GetArticle;
+using Domain.Entities;
 using FluentAssertions;
 using NUnit.Framework;
 
