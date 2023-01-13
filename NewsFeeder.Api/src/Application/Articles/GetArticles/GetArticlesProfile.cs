@@ -1,5 +1,5 @@
-﻿using Domain.Entities;
-using AutoMapper;
+﻿using AutoMapper;
+using Domain.Entities;
 
 namespace Application.Articles.GetArticles;
 
